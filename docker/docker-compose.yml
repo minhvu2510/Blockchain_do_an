@@ -1,0 +1,49 @@
+version: '2'
+
+services:
+
+  mongodb:
+    image: mongodb
+    ports:
+      - "27017:27017"
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 20000
+        hard: 40000
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+    network_mode: host
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+  api:
+    container_name: api
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    ports:
+      - 9000:9000
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /srv/dashboard_eng:/code/dashboard_eng
+    environment:
+      - MONGO_CLIENT=${MONGO_CLIENT}
+      - MONGO_DATABASE=${MONGO_DATABASE}
+    depends_on:
+      - mongodb
+    restart: always
+    network_mode: host
+  fe:
+    image: nginx
+    container_name: nginx
+    volumes:
+      - /srv/code:/code
+      - .//nginx.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - api
+      - mongodb
+    ports:
+      - "80:80"
+      - "443:443"

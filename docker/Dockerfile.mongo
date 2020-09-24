@@ -1,0 +1,14 @@
+
+FROM mongo:3.6.8
+
+RUN mkdir -p /mvp
+COPY ./mvp /mvp
+
+# Khởi tạo db với file dữ liệu trong mvp
+COPY ./entrypoint_mongo.sh /entrypoint_mongo.sh
+
+RUN chmod 777 /entrypoint_mongo.sh
+
+EXPOSE 27017
+
+CMD /entrypoint_mongo.sh
