@@ -21,7 +21,9 @@
 ## Build, run code
 * Thay đổi thông tin db tại file api/
 * Chạy lệnh sau để build tại localhost: (api, mongo, vuejs)
+
 ```bash
 set .env && docker-compose up -d --build
 ```
+
 ### Chạy netword_blockchain dưới dạng docker: miêu tả chi tiết trong thư mục network_blockchain
