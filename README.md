@@ -1,4 +1,6 @@
-# Thí sinh làm bài thi trắc nghiệm sau đó lưu kết quả bài làm và đáp án lên mạng fabric b
+# Mô tả project
+### Ứng dụng blockchain trong công tác thi cử, tránh trường hợp sửa đổi điểm của thí sinh
+# Thí sinh làm bài thi trắc nghiệm sau đó lưu kết quả bài làm và đáp án lên mạng fabric blockchain
 ## Project Structure
     ├── api                   // backend cho web thi trắc 
     ├── frontend                    // Giao diện làm bài 
