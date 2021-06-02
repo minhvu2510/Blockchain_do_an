@@ -26,4 +26,4 @@
 set .env && docker-compose up -d --build
 ```
 
-### Chạy netword_blockchain dưới dạng docker: miêu tả chi tiết trong thư mục network_blockchain
+### Chạy network_blockchain dưới dạng docker: miêu tả chi tiết trong thư mục network_blockchain
