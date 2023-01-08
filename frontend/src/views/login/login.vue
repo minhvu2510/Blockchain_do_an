@@ -203,7 +203,7 @@ Cố gắng lên nhé!"
     /*}*/
     /*.el-carousel__item:nth-child(2n) {*/
         /*background-color: #d3dce6;*/
-        /*background-image: url("https://media-giaoducthoidai.cdn.vccloud.vn/Uploaded/nhungnt/2019-06-04/thi-thpt-quoc-gia-JNFY.jpg");*/
+        /*background-image: url("https://media-giaoducthoidai.cdn.vunmloud.vn/Uploaded/nhungnt/2019-06-04/thi-thpt-quoc-gia-JNFY.jpg");*/
     /*}*/
 
     .txtinsetshadow {

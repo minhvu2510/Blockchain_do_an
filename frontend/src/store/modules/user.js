@@ -67,7 +67,7 @@ const user = {
       removeToken()
       window.location.href = process.env.APP_URL + '/login'
       // window.location.href = process.env.SSO_URL + '/logout?service=' + process.env.APP_URL + '&gateway=true'
-      // window.location.href = 'https://manage.vccloud.vn/cas' + '/login?service=https://manage-callcenter.vccloud.vn/'
+      // window.location.href = 'https://manage.vunmloud.vn/cas' + '/login?service=https://manage-callcenter.vunmloud.vn/'
     },
     FedLogOut({ commit }) {
       return new Promise(resolve => {
